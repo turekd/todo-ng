@@ -1,0 +1,14 @@
+<div class="create-form-container">
+  <mat-form-field>
+    <textarea [(ngModel)]="todo.text" matInput placeholder="What do you have TODO?"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select [(ngModel)]="todo.priority" placeholder="Priority">
+      <mat-option value="LOW">Low</mat-option>
+      <mat-option value="NORMAL">Normal</mat-option>
+      <mat-option value="HIGH">High</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button (click)="create()" mat-raised-button color="primary" [disabled]="validate()">Add</button>
+</div>

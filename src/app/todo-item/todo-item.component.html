@@ -1,0 +1,23 @@
+<mat-card class="todo-card {{ todo.priority | lowercase }}" [ngClass]="todo.done ? 'done' : ''">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-chip>{{ getPriorityLabel() }}</mat-chip>
+      {{ todo.text }}
+    </mat-card-title>
+    <mat-card-subtitle>{{ todo.createdAt | date : "short"}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <button *ngIf="!todo.done" (click)="setDone(true)" mat-button color="primary">
+      Solve
+    </button>
+    <button *ngIf="todo.done" (click)="setDone(false)" mat-button>
+      Open
+    </button>
+    <button mat-button (click)="edit()" [disabled]="isEditDisabled()">
+      Edit
+    </button>
+    <button *ngIf="todo.done" (click)="delete()" mat-button color="warn">
+      Delete
+    </button>
+  </mat-card-actions>
+</mat-card>

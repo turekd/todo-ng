@@ -1,0 +1,17 @@
+<div *ngIf="filteredTodos">
+  <div>
+    <mat-form-field>
+      <mat-label>Sort by</mat-label>
+      <mat-select [(ngModel)]="selectedSortOption" (ngModelChange)="runFilters()">
+        <mat-option *ngFor="let sort of sortOptions" [value]="sort">
+          {{sort}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-checkbox [(ngModel)]="showSolvedFilter" (ngModelChange)="runFilters()">Show solved</mat-checkbox>
+  </div>
+  <mat-divider></mat-divider>
+  <div fxLayout="row wrap" fxLayoutAlign="space-between start" fxLayoutGap="12px">
+    <app-todo-item *ngFor="let todo of filteredTodos" [todo]="todo"></app-todo-item>
+  </div>
+</div>

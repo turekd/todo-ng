@@ -1,0 +1,19 @@
+.todo-card {
+  margin-top: 15px;
+}
+
+.todo-card.high .mat-card-title {
+  font-size: 30px;
+}
+
+.todo-card.normal .mat-card-title {
+  font-size: 20px;
+}
+
+.todo-card.low .mat-card-title {
+  font-size: 15px;
+}
+
+.todo-card.done {
+  opacity: 0.5;
+}
