@@ -7,13 +7,17 @@
 }
 
 .todo-card.normal .mat-card-title {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .todo-card.low .mat-card-title {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .todo-card.done {
   opacity: 0.5;
+}
+
+.creation-date {
+  font-size: 13px;
 }

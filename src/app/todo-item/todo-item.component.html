@@ -4,7 +4,7 @@
       <mat-chip>{{ getPriorityLabel() }}</mat-chip>
       {{ todo.text }}
     </mat-card-title>
-    <mat-card-subtitle>{{ todo.createdAt | date : "short"}}</mat-card-subtitle>
+    <mat-card-subtitle class="creation-date">{{ todo.createdAt | date : "short"}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions>
     <button *ngIf="!todo.done" (click)="setDone(true)" mat-button color="primary">

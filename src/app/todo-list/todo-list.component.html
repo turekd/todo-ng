@@ -1,4 +1,7 @@
-<div *ngIf="filteredTodos">
+<div *ngIf="filteredTodos.length == 0">
+  Nothing to do?
+</div>
+<div *ngIf="filteredTodos.length > 0">
   <div>
     <mat-form-field>
       <mat-label>Sort by</mat-label>

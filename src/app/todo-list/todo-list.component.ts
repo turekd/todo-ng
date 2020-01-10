@@ -17,11 +17,11 @@ const SORT_OPTIONS = [
 })
 export class TodoListComponent implements OnInit {
 
-  filteredTodos: Todo[];
-  todos: Todo[];
+  filteredTodos: Todo[] = [];
+  todos: Todo[] = [];
   sortOptions = SORT_OPTIONS;
-  selectedSortOption: string;
-  showSolvedFilter: boolean;
+  selectedSortOption = 'priority_desc';
+  showSolvedFilter = true;
 
   constructor(
     private todoService: TodoService,
@@ -36,8 +36,6 @@ export class TodoListComponent implements OnInit {
         this.getTodos();
       });
     }
-    this.selectedSortOption = 'priority_desc';
-    this.showSolvedFilter = true;
   }
 
   runFilters() {
