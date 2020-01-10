@@ -50,3 +50,7 @@ package-lock.json
 # System Files
 .DS_Store
 Thumbs.db
+
+# envs
+/src/environments/environment.prod.ts
+/src/environments/environment.test.ts
