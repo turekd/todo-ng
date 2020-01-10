@@ -3,13 +3,14 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {catchError} from 'rxjs/operators';
 import {Todo} from './todo';
 import {Observable, of} from 'rxjs';
+import {environment} from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
 
-  private todoApiUrl = 'http://localhost:8090/todo';
+  private todoApiUrl = environment.apiUrl;
   private httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };

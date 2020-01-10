@@ -30,6 +30,22 @@
             "scripts": []
           },
           "configurations": {
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ]
+            },
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -69,6 +85,12 @@
           "configurations": {
             "production": {
               "browserTarget": "todo-ng:build:production"
+            },
+            "local": {
+              "browserTarget": "todo-ng:build:local"
+            },
+            "test": {
+              "browserTarget": "todo-ng:build:test"
             }
           }
         },
